@@ -1,0 +1,29 @@
+{
+  "name": "postman",
+  "version": "1.0.0",
+  "description": "Postman clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulchakravarthy/postman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulchakravarthy/postman/issues"
+  },
+  "homepage": "https://github.com/vipulchakravarthy/postman#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {
+    "snowpack": "^3.7.1"
+  }
+}

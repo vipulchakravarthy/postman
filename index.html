@@ -11,16 +11,16 @@
 
 <body>
     <div class="p-4">
-        <form>
+        <form data-form>
             <div class="input-group mb-4">
-                <select class="form-select flex-grow-0  w-auto">
+                <select class="form-select flex-grow-0  w-auto" data-method>
                     <option value="GET">GET</option>
                     <option value="POST">POST</option>
                     <option value="PUT">PUT</option>
                     <option value="PATCH">PATCH</option>
                     <option value="DELETE">DELETE</option>
                 </select>
-                <input class="form-control" placeholder="https://example.com" type="url" required />
+                <input data-url class="form-control" placeholder="https://example.com" type="url" required />
                 <button class="btn btn-primary" type="submit">Send</button>
             </div>
 
@@ -60,8 +60,8 @@
 
     <template data-key-value-template>
         <div class="input-group my-2" data-key-value-pair>
-            <input class="form-control" type="text" placeholder="Key" />
-            <input class="form-control" type="text" placeholder="Value" />
+            <input class="form-control" type="text" placeholder="Key" data-key />
+            <input class="form-control" type="text" placeholder="Value" data-value />
 
             <button type="button" data-remove-btn class="btn btn-danger">Remove</button>
         </div>

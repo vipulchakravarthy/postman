@@ -12,6 +12,7 @@ const requestHeadersContainer = document.querySelector('[data-request-headers]')
 const keyValueTemplate = document.querySelector('[data-key-value-template]')
 const responseHeadersContainer = document.querySelector('[data-response-headers]');
 
+// to calculate the total time taken for a req
 axios.interceptors.request.use(request => {
     request.customData = request.customData || {};
     request.customData.startTime = new Date().getTime();
@@ -29,6 +30,7 @@ function updateEndTime(response) {
     return response;
 }
 
+// to add the key value input boxes
 document.querySelector('[data-add-query-params-btn]').addEventListener('click', e => {
     queryParamsContainer.append(createKeyValuePair());
 });
@@ -48,6 +50,7 @@ function createKeyValuePair() {
     return element;
 }
 
+//text editor for json format
 const { requestEditor, updateResponseEditor } = setUpEditors();
 
 form.addEventListener('submit', e => {
@@ -80,7 +83,6 @@ function updateResponseData(response) {
     document.querySelector('[data-json-response-body]').innerHTML =
         `<pre style="word-wrap: break-word; white-space: pre-wrap;">${JSON.stringify(response, null, 2)}</pre>`;
 }
-
 
 function updateResponseDetails(response) {
     document.querySelector('[data-status]').textContent = response.status;
